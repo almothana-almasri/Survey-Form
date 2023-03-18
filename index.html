@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Survey Form</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<h1 id="title">Survey Form</h1>
+	<p id="description">Please fill out this survey to help us improve our service:</p>
+	<form id="survey-form" method="post" action='https://register-demo.freecodecamp.org'>
+		<fieldset>
+			<label id="name-label" for="name">Name:</label>
+			<input type="text" id="name" class="box" name="name" placeholder="Enter your name" required>
+
+			<label id="email-label" for="email">Email:</label>
+			<input type="email" id="email" class="box" name="email" placeholder="Enter your email" required>
+
+			<label id="number-label" for="number">Age:</label>
+			<input type="number" id="number" class="box" name="age" placeholder="Enter your age" min="18" max="100"
+				required>
+		</fieldset>
+		<fieldset>
+			<label for="dropdown" class="box">Choose your favorite color:</label>
+			<select id="dropdown" name="color" required>
+				<option value="" disabled selected>Select color</option>
+				<option value="red">Red</option>
+				<option value="green">Green</option>
+				<option value="blue">Blue</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<legend>Do you like our service?</legend>
+			<label><input type="radio" name="service" value="yes" class="inline" required> Yes</label>
+			<label><input type="radio" name="service" value="no" class="inline"> No</label>
+		</fieldset>
+
+		<fieldset>
+			<legend>Which features do you like?</legend>
+			<label><input type="checkbox" name="features" value="design" class="inline"> Design</label>
+			<label><input type="checkbox" name="features" value="functionality" class="inline"> Functionality</label>
+			<label><input type="checkbox" name="features" value="ease-of-use" class="inline"> Ease of use</label>
+			<label><input type="checkbox" name="features" value="pricing" class="inline"> Pricing</label>
+		</fieldset>
+
+		<label for="comments">Additional comments:</label>
+		<textarea id="comments" name="comments"></textarea>
+
+		<input type="submit" id="submit" value="Submit" />
+
+	</form>
+</body>
+
+</html>
